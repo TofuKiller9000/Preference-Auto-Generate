@@ -266,3 +266,101 @@ footer {
     flex-direction: column;
   }
 }
+.generator-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.generator-panel {
+  min-width: 0;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.generator-panel h2 {
+  margin-top: 0;
+  font-size: 1.35rem;
+}
+
+.generator-panel label {
+  display: block;
+  margin: 18px 0 8px;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.generator-panel select,
+.generator-panel input,
+.generator-panel textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+
+.generator-panel select:focus,
+.generator-panel input:focus,
+.generator-panel textarea:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.generator-panel textarea {
+  resize: vertical;
+}
+
+.question {
+  padding-bottom: 12px;
+}
+
+.generator-panel button {
+  margin: 10px 8px 0 0;
+}
+
+.output-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.output-status {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+#output {
+  min-height: 300px;
+  margin: 16px 0 8px;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.88rem;
+  line-height: 1.8;
+  background: #f8f9fc;
+}
+
+.form-error {
+  color: #b42318;
+  font-size: 0.9rem;
+}
+
+.disclaimer {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 850px) {
+  .generator-layout {
+    grid-template-columns: 1fr;
+  }
+}
