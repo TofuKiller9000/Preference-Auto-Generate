@@ -1,1 +1,96 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive preference standardization demo.">
+  <title>Preference Generator | PreferenceLab</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/preferences.js" defer></script>
+  <script src="js/generator.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="index.html">Preference<span>Lab</span></a>
+    <div class="nav-links">
+      <a href="index.html">Overview</a>
+      <a href="generator.html">Live Demo</a>
+      <a href="case-study.html">Case Study</a>
+    </div>
+  </nav>
+
+  <main class="section">
+    <div class="section-heading">
+      <p class="eyebrow">INTERACTIVE DEMONSTRATION</p>
+      <h1>Preference Generator</h1>
+      <p>
+        Choose a department and complete its questions to produce
+        consistently formatted preference text.
+      </p>
+    </div>
+
+    <div class="generator-layout">
+      <section class="generator-panel">
+        <h2>Preference details</h2>
+
+        <label for="department">Department</label>
+        <select id="department">
+          <option value="">Choose a department...</option>
+        </select>
+
+        <p id="department-description" class="muted">
+          Select a department to get started.
+        </p>
+
+        <form id="preference-form">
+          <div id="question-container"></div>
+
+          <p id="form-error" class="form-error"
+             role="alert" aria-live="polite"></p>
+
+          <button class="button button-primary" type="submit">
+            Generate Preferences
+          </button>
+          <button class="button button-secondary" type="button"
+                  id="reset-button">
+            Reset
+          </button>
+        </form>
+      </section>
+
+      <section class="generator-panel output-panel">
+        <div class="output-heading">
+          <div>
+            <p class="eyebrow">GENERATED RESULT</p>
+            <h2>Your formatted text</h2>
+          </div>
+          <span class="output-status" id="output-status">Not generated</span>
+        </div>
+
+        <textarea id="output" readonly
+          aria-label="Generated preference text"
+          placeholder="Your formatted preferences will appear here."
+          rows="14"></textarea>
+
+        <button class="button button-primary" type="button"
+                id="copy-button" disabled>
+          Copy to Clipboard
+        </button>
+        <p id="copy-status" class="muted" aria-live="polite"></p>
+
+        <p class="disclaimer">
+          Demo only. Uses fictional examples and does not connect
+          to a real account or production system.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Preference Standardization · Software Developer Portfolio</p>
+    <a href="index.html">Back to overview</a>
+  </footer>
+</body>
+</html>
+
