@@ -11,7 +11,7 @@
   --shadow: 0 12px 35px rgba(32, 38, 58, 0.06);
 }
 
-.sidebar {
+.w3-sidebar {
   z-index: 3;
   width: 250px; 
   top: 43px; 
