@@ -1,104 +1,241 @@
-/*
- * SAMPLE CONFIGURATION ONLY.
- * Replace these questions and formatting rules with approved,
- * fictionalized examples based on your actual style guide.
- */
-
 window.PREFERENCE_CONFIG = {
   departments: {
     denture: {
-      label: "Denture",
+      label: "Denture Department",
       description: "Sample preferences for the denture department.",
       questions: [
         {
-          id: "workflow",
-          label: "Workflow preference",
+          id: "type",
+          label: "Denture Type",
           type: "select",
-          required: true,
+          required: false,
           options: [
-            "Standard workflow",
-            "Digital workflow",
-            "Confirm before proceeding"
+            "Ivocap",
+            "Digital",
+            "Ivotion"
           ]
         },
         {
-          id: "shade",
-          label: "Shade instructions",
+          id: "teeth",
+          label: "Teeth Type",
           type: "select",
-          required: true,
+          required: false,
           options: [
-            "Match existing",
-            "Use specified shade",
-            "Confirm with office"
+            "Economoy",
+            "Premium"
           ]
         },
         {
-          id: "fit",
-          label: "Fit instructions",
+          id: "name",
+          label: "Name in Denture",
           type: "select",
-          required: true,
+          required: false,
           options: [
-            "Standard fit",
-            "Additional verification",
-            "Confirm before proceeding"
+            "Yes - Always",
+            "Yes - If at NC",
+            "No"
           ]
         },
         {
-          id: "delivery",
-          label: "Delivery preference",
+          id: "postdam",
+          label: "Post Dam",
+          type: "select",
+          required: false,
+          options: [
+            "Yes on Analog & Digital",
+            "Yes on Analog & No on Digital",
+            "No on Analog & Yes on Digital",
+            "No on both Analog & Digital"
+          ]
+        },
+        {
+          id: "setup",
+          label: "Set-Ups",
+          type: "select",
+          required: false,
+          options: [
+            "Idealized",
+            "Characterized",
+            "Follow study model when provided"
+          ]
+        },
+        {
+          id: "stippling",
+          label: "Stippling",
+          type: "select",
+          required: false,
+          options: [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          id: "festoon",
+          label: "Festooning",
+          type: "select",
+          required: false,
+          options: [
+            "Yes",
+            "No"
+          ]
+        },
+
+        
+    crownBridge: {
+      label: "Fixed and Implant",
+      description: "Sample preferences for the crown and bridge department.",
+      questions: [
+        {
+          id: "occlusal",
+          label: "Occlusal Contact",
+          type: "select",
+          required: true,
+          options: [
+            "Silver Hold",
+            "Clear Hold",
+            "Yellow",
+            "Blue",
+            "Black",
+            "Double Black"
+          ]
+        },
+        {
+          id: "PC",
+          label: "Interproximal Contacts",
+          type: "select",
+          required: true,
+          options: [
+            "Yellow",
+            "Clear",
+            "Silver", 
+            "Tight", 
+            "Extra Tight"
+          ]
+        },
+        {
+          id: "PCShape",
+          label: "Contact Shape",
           type: "select",
           required: true,
           options: [
             "Standard",
-            "Expedited",
-            "Coordinate with office"
+            "Broad",
+            "Extra Broad"
           ]
         },
         {
-          id: "notes",
-          label: "Additional instructions",
-          type: "textarea",
-          required: false,
-          placeholder: "Enter fictional example instructions..."
-        }
-      ]
-    },
-
-    crownBridge: {
-      label: "Crown & Bridge",
-      description: "Sample preferences for the crown and bridge department.",
-      questions: [
-        {
-          id: "material",
-          label: "Material preference",
+          id: "space",
+          label: "Limited Occlusal Space",
           type: "select",
           required: true,
           options: [
-            "Material A",
-            "Material B",
-            "Confirm before proceeding"
+            "Ok to reduce up to 0.75mm",
+            "Ok to reduce up to 0.5mm",
+            "Ok to reduce w/ reduction coping", 
+            "Contact Office"
           ]
         },
-        {
-          id: "workflow",
-          label: "Workflow preference",
+                {
+          id: "blanching",
+          label: "Tissue Blanching",
           type: "select",
           required: true,
           options: [
-            "Standard workflow",
-            "Digital workflow",
-            "Confirm with office"
+            "None",
+            "Ideal",
+            "Light", 
+            "Contact Office"
           ]
         },
         {
-          id: "notes",
-          label: "Additional instructions",
-          type: "textarea",
-          required: false,
-          placeholder: "Enter fictional example instructions..."
-        }
-      ]
-    },
+          id: "undercutdie",
+          label: "Die Undercut",
+          type: "select",
+          required: true,
+          options: [
+            "Block out undercuts",
+            "Contact Office",
+            "Adjust prep & send reduction coping", 
+            "Adjust prep & send note"
+          ]
+        },
+          {
+          id: "models",
+          label: "Fabricate Models",
+          type: "select",
+          required: true,
+          options: [
+            "Yes",
+            "No - unless needed",
+          ]
+        },
+        {
+          id: "pfm",
+          label: "Alloy - PFM",
+          type: "select",
+          required: true,
+          options: [
+            "High Noble - Yellow",
+            "High Noble - White",
+            "Nobel - Yellow",
+            "Nobel - White",
+            "Base Non-Precious"
+          ]
+        },
+        {
+          id: "fcc",
+          label: "Alloy - Full Cast Crown",
+          type: "select",
+          required: true,
+          options: [
+            "High Noble - Yellow",
+            "High Noble - White",
+            "Nobel - Yellow",
+            "Nobel - White",
+            "Base Non-Precious"
+          ]
+        },
+        {
+          id: "metalLingual",
+          label: "Metal Lingual Needed",
+          type: "select",
+          required: true,
+          options: [
+            "Contact Office",
+            "Proceed w/o call",
+          ]
+        },
+        {
+          id: "metalOcclusal",
+          label: "Metal Occlusal Needed",
+          type: "select",
+          required: true,
+          options: [
+            "Contact Office",
+            "Proceed w/o call",
+          ]
+        },
+          {
+          id: "diagnostic",
+          label: "Diagnostic",
+          type: "select",
+          required: true,
+          options: [
+            "Digital diagnostic wax-up",
+            "Hand-waxed",
+            "Send STL file only"
+          ]
+        },
+        {
+          id: "matrix",
+          label: "Diagnostic Model Matrix",
+          type: "select",
+          required: true,
+          options: [
+            "Putty",
+            "Digital Exxis Matrix",
+          ]
+        },
 
     orthodontics: {
       label: "Orthodontics",
