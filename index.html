@@ -33,98 +33,59 @@
       </nav>
     </div>
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
-  <main>
-    <section class="hero">
-      <p class="eyebrow">SOFTWARE DEVELOPMENT · PROCESS IMPROVEMENT</p>
-      <h1>Turning inconsistent data into <span>clear, structured preferences.</span></h1>
-      <p class="hero-description">
-        An interactive demonstration of a system designed to standardize
-        account-specific preferences, improve readability, and make
-        critical information easier to find.
-      </p>
+  <button onclick="w3_close()" class="w3-button w3-hide-large w3-display-topright w3-xlarge" title="Close Menu">
+    x
+  </button>
+  <h4 class ="w3-bar-item"><b>Menu</b></h4>
+
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Link</a>
+</nav>
+
+<div class = "w3-overlay w3-hide-large" onclick="w3_close()"style="cursor:pointer"title="Close side menu"id="myOverlay"></div>
+
+<main>
+  <section class = "w3-container w3-pading-64">
       <div class="hero-actions">
         <a class="button button-primary" href="generator.html">
           Explore the Generator →
-        </a>
-        <a class="button button-secondary"
-           href="https://github.com/TofuKiller9000/Preference-Style-Guide-"
-           target="_blank" rel="noopener noreferrer">
-          View Style Guide ↗
-        </a>
-      </div>
-      <div class="hero-note">
-        Independent portfolio demonstration · Uses fictional example data
-      </div>
-    </section>
-
-    <section class="section" id="overview">
-      <div class="section-heading">
-        <p class="eyebrow">THE PROJECT</p>
-        <h2>Solving a real-world documentation problem</h2>
-        <p>
-          When account preferences are documented inconsistently,
-          finding the right information becomes unnecessarily difficult.
-          This project explores a more structured, repeatable approach.
-        </p>
-      </div>
-
-      <div class="feature-grid">
-        <article class="feature-card">
-          <span class="feature-number">01</span>
-          <h3>Standardize</h3>
-          <p>Establish consistent formatting and a predictable structure
-             for account-specific requirements.</p>
-        </article>
-        <article class="feature-card">
-          <span class="feature-number">02</span>
-          <h3>Simplify</h3>
-          <p>Organize information by department so users can find
-             relevant preferences more efficiently.</p>
-        </article>
-        <article class="feature-card">
-          <span class="feature-number">03</span>
-          <h3>Demonstrate</h3>
-          <p>Use a configurable generator to show how structured inputs
-             can produce consistent, readable output.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="demo-callout">
-      <div>
-        <p class="eyebrow">TRY IT YOURSELF</p>
-        <h2>See structured preferences in action.</h2>
-        <p>Select a department, answer a few questions, and generate
-           a formatted example in seconds.</p>
-      </div>
-      <a class="button button-primary" href="generator.html">
-        Open Interactive Demo →
       </a>
-    </section>
-
-    <section class="section">
-      <div class="section-heading">
-        <p class="eyebrow">IMPLEMENTATION</p>
-        <h2>Designed for clarity and maintainability</h2>
+    <div class="content-grid">
+      <div>
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
-      <div class="tech-list">
-        <span>HTML5</span>
-        <span>CSS3</span>
-        <span>JavaScript</span>
-        <span>Configuration-driven rules</span>
-        <span>GitHub Pages</span>
+      <div>
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
-      <p class="muted">
-        This is an independent demonstration, not a connection to any
-        employer system. All generated preferences are fictional.
-      </p>
-    </section>
-  </main>
+      <div>
+        <h1 class="w3-text-teal">Heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+</main>
 
-  <footer>
+<footer>
     <p>Preference Standardization · Software Developer Portfolio</p>
     <a href="https://github.com/TofuKiller9000/Preference-Style-Guide-"
        target="_blank" rel="noopener noreferrer">Documentation</a>
-  </footer>
+</footer>
+<script>
+    const sidebar = document.getElementById("mySidebar");
+    const overlay = document.getElementById("myOverlay");
+
+    function w3_open() {
+    sidebar.style.display = "block";
+    overlay.style.display = "block";
+                        }
+
+    function w3_close() {
+    sidebar.style.display = "none";
+    overlay.style.display = "none";
+                        }
+</script>
 </body>
 </html>
