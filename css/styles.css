@@ -11,8 +11,24 @@
   --shadow: 0 12px 35px rgba(32, 38, 58, 0.06);
 }
 
-* {
-  box-sizing: border-box;
+.sidebar {
+  z-index: 3;
+  width: 250px; 
+  top: 43px; 
+  bottom: 0;
+  height:inherit;
+}
+
+.content-grid
+{
+display:grid;
+grid-template-columns:minmax(0,2fr) minmax(220px,1fr);
+gap: 24px;
+}
+
+@media(max-width:600px)
+{
+.content-grid {grid-template-columns:1fr;}
 }
 
 html {
